@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>onclick, </title>
+		<script type="text/javascript">
+			var myImages = new Array("usa.gif","canada.gif","jamaica.gif","mexico.gif", "barbados.png");
+			function changeImg(that)
+			{
+				var newImgNumber = Math.round(Math.random() * 3);
+				while (that.src.indexOf(myImages[newImgNumber]) != -1)
+				{
+					newImgNumber = Math.round(Math.random() * 3);
+				}
+				that.src = myImages[newImgNumber];
+				return false;
+			}
+
+			function DoubleSize(that)
+			{
+				that.width = 2 * that.width;
+				that.height = 2 * that.height;
+			}
+
+			function SizeShrink(that)
+			{
+				that.width =  that.width/2;
+				that.height = that.height/2;
+			}
+
+		</script>
+	</head> 
+	<body>
+	<!--onclick event is used to change the picture-->
+		<img name="img0" src="usa.gif" border="0" width="200" height="100" 
+			onclick="return changeImg(this)" /> 
+
+		<img name="img1" src="mexico.gif" border="0" width="200" height="100" 
+			onclick="return changeImg(this)"/>
+<!-- onmouseover event is used to increase the size of the image-->
+<!-- onmouseout event is used to reduce the image size-->
+		<img id="img2" src="barbados.png" border="0" width="200" height="100"
+			onclick="return changeImg(this)"  
+			onmouseover="return DoubleSize(this)"  
+			onmouseout="return SizeShrink(this)" /> 
+	</body>
+</html>

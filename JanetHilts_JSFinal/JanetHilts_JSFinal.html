@@ -1,0 +1,681 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janet's JavaScript Cheat-sheet for beginners</title>
+<link href="jsfinalproject.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<div id="mainwrapper">
+  <header> 
+    <!--**************************************************************************
+    Header starts here. It contains Logo and 3 navigation links. 
+    ****************************************************************************-->
+   
+   
+  </header>
+  <div id="content">
+    <div class="notOnDesktop"> 
+      <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
+      <input type="text" placeholder="Search">
+    </div>
+    <section id="mainContent"> 
+      <h1>JavaScript Cheat-sheet</h1>
+      <p><em>by Janet Flora Hilts</em></p>
+		
+		<h4>References</h4><p>
+Elmesalami, A. (2017). Class Notes from Prog2283. Oshawa, Ontario: Durham College.<br/>
+McPeak, J. (2015). Beginning JavaScript, 5th Edition. Indianapolis, Indiana : Wrox.<br/>
+Refsnes Data. (n.d.). JavaScript Tutorial. Retrieved from W3 Schools: https://www.w3schools.com/<br/>
+
+</p>
+		<article>
+	<h2>Part 1. JavaScript Language Fundamentals </h2>
+	 <h3>Variables</h3>
+      	<p>Variables are used to name data, so we can store data in that name. Then we can access that data in scripts.  </p>
+		
+      	<p>To create a variable, you use the <strong>var</strong> keyword and then give the variable a name.  A variable name must begin with a letter, a $ sign, or the _ underscore, and it cannot contain spaces.  Also, variable names are case-sensitive. A variable example is:  <em>myVariable</em>. </p>
+		<h6>Syntax:</h6>
+		<p class="syntax">var variablename;</p>
+		<p>For example: </p>
+		<p class="code">var myVariable1;</p>
+		<p>This is called declaring a variable. After a variable is declared, you can assign a value to it.</p> 
+		<h6>Syntax:</h6>
+		<p class="syntax">Variablename = somedata;</p>
+		<p>For example:</p>
+		<p class="code">myVariable1 = 1+2; <br/>
+myVariable2 = “Some text”;
+		</p>  
+		<p>It is possible to declare a variable and assign it some value in one line:</p>
+		<p class="code">var myVariable2 = “Some text”;</p>
+
+		<p>It is also possible to declare and assign value to numerous variables in the same line:</p>
+		<p class="code">var myVariable2 = “Some text”, myVairable3 = 3*5, myVariable4 = true;
+		</p>
+		<p>Variable in JavaScript come in two main data types: <strong>Simple</strong> and <strong>Complex</strong>. Simple data types are: <strong>undefined</strong>,<strong> null</strong>, <strong>Boolean</strong>, <strong>number</strong>, and <strong>string</strong>. The complex data type is <strong>object</strong>.</p>
+		<p>It is possible to convert non-numeric values into numbers. There are three ways to do this:</p>
+		<ul>
+		<li>Number() function</li>
+			<li>parseInt() function</li>
+			<li>parseFloat() function</li>
+		</ul>
+ 		  
+		<p><em>Number() function</em> converts a Boolean variable to a number: true becomes 1 and false becomes 0.<br/>
+          <em>parseInt() function</em> converts a String variable to a number.  Whatever number is in quotes becomes an actual number. “400” becomes 400. <br/>
+<em>parseFloat() function</em> is like parseInt(), but the number is converted into a float-point number. </p>
+		
+		<h5>Complex Data Types: The Object Data Type</h5>
+		<p>Two types of objects are possible:</p>
+		<ul>
+			<li>built-in objects</li>
+			<li>custom objects</li>
+		</ul>
+
+
+		<p>Custom objects are defined by the programmer while built in objects are pre-defined, sort of like they are part of a JavaScript dictionary that a programmer can borrow from.
+
+Custom objects are like the other data types except that they can include many values.
+For example, a variable <em>skirt</em> can be given properties (size, colour, style, etc) and then values can be given for each property (large, red, a-line, etc.). </p>
+		<p class="code">var skirt = {style:"pencil", size:"M", color:"tan"};</p>
+		<a href="1.0-Variables.html" target="new">Code Example - Variables</a>
+		<p></p>
+		<hr/>
+		
+<h3>1.2 Operators</h3>	
+		<p>Operators are used to manipulate data values.
+JavaScript has different types of operators:
+		</p>
+		<ul>
+			<li>Assignment operators</li>
+			<li>Comparison operators</li>
+			<li>Arithmetic operators</li>
+			<li>Logical operators </li>
+			<li>Conditional operators</li>
+		</ul>
+		
+		<h5>Assignment operators</h5>
+		<p>= is used to assign a value to a variable, array element, or object property.</p>
+<p class="code">var a = b; </p> 
+		<p>There are other assignment operators:</p>
+		<ul>
+			<li>a += b  (means a = a + b )</li>
+			<li>a += b  (means a = a + b )</li>
+			<li>a -= b (means a = a – b)</li>
+			<li>a *= b (means a = a x b) </li>
+			<li>a /= b (means a = a ÷ b)</li>
+			<li>a %= b (means a = a % b)</li>
+		</ul>
+		
+		<a href="1.2_Operators_assignment.html" target="new">Code - Assignment Operators</a>
+		<h5>Comparison operators </h5>
+		<ul>
+			<li> == (is equal to)</li>
+			<li> === (both value and type are equal)</li>
+			<li> != (is not equal)</li>
+			<li> !== (both value and type are not equal) </li>
+			<li> > (greater than)</li>
+			<li> >= (greater than or equal to)</li>
+			<li> < (less than)</li>
+			<li> <= (less than or equal to)</li>
+		</ul>
+		<a href="1.2_Operators_comparison.html" target="new">Code - Comparison operators</a>
+		
+		<h5>Logical operators</h5>
+			<ul>
+				<li> && (and)</li>
+				<li> || (or)</li>
+				<li> ! (not)</li>
+			</ul>
+		<a href="1.2_Operators_logical.html" target="new">Code - Logical Operators</a>
+		<h5>Arithmetic Operators</h5>
+		<ul>
+			<li> + (addition)</li>
+			<li> - (subtraction)</li>
+			<li> + (concantination - for strings)</li>
+			<li> * (multiplication) </li>
+			<li> / (division)</li>
+			<li> % (modulus - division remainder)</li>
+		</ul>
+		<h6>Unary Arithmetic Operators</h6>
+		<ul>
+			<li> ++ (increment)</li>
+			<li> -- (decrement)</li>
+		</ul>
+		<a href="1.2_Operators_arithmetic-b.html" target="new">Code - Arithmetic Operators</a>
+		<h5>Conditional operators</h5>
+		<p>Conditional operators are used so we can apply logic to our applications so that certain code will execute only under certain conditions.</p>
+			<ul>
+				<li> :? (tertiary operator)</li>
+			</ul>
+		<h6>Syntax:</h6>
+		<p class="syntax">variablename = (condition) ? value1:value2 </p>
+		<a href="1.2_Operators_conditional.html" target="new">Code - Conditional operators</a>
+		
+	  <h3>1.3 Conditional Statements
+	  </h3>
+	  <p>Conditional statements can be used when we want certain code to execute only after certain decisions are made. </p>
+	  <p>The conditional statements are: if, else, else if, and switch.</p>
+		
+	<h5>If statement</h5>
+	  <p>We use this when we want a certain code to be executed only if a certain condition is true.</p>
+	  <h6>Syntax</h6>
+	  <p class="syntax">if (condition) {
+    block of code to be executed if the condition is true
+}
+			</p>
+		<p>If we wanted a message to pop up when the temperature a user enters is lower than 0 degrees Celsius, “That's below the freezing point of water”, we could use an if statement:
+if (degCent < 0)
+		</p>
+	  <p class="code">if (degCent < 0) {<br/>
+            document.write("That's below the freezing point of water");<br/>
+        }
+	  </p>
+	  <a href="1.3_Conditional_statement_if.html" target="new">Code - If Statement</a>
+				
+	<h5>Else Statement</h5>
+	  <p>We can add an else statement after an if statement. We use this when we want a certain code to be executed only if the condition if false.</p>
+		<h6>Syntax</h6>
+	  <p class="syntax">if (condition) {<br/>
+    block of code to be executed if the condition is true<br/>
+} else { <br/>
+    block of code to be executed if the condition is false<br/>
+}
+	  </p>
+		
+	<h5>Else If Statement</h5>	
+	  <p>We can use the else if statement when we want certain code to be executed if the first condition is false.</p>
+		<h6>Syntax</h6>
+	  <p class="syntax">if (condition1) {<br/>
+    block of code to be executed if condition1 is true<br/>
+} else if (condition2) {<br/>
+    block of code to be executed if the condition1 is false and condition2 is true<br/>
+} else {<br/>
+    block of code to be executed if the condition1 is false and condition2 is false<br/>
+}
+	  </p>
+	<h5>Switch</h5>
+	  <p>We use the switch statement to perform different actions based on different conditions. It is similar to the if statement.</p>
+		<h6>Syntax</h6>
+	  <p class="syntax">switch (expression) {
+  case value1:<br/>
+    //Statements executed when the
+    //result of expression matches value1<br/>
+    [break;]<br/>
+  case value2:<br/>
+    //Statements executed when the
+    //result of expression matches value2<br/>
+    [break;]<br/>
+  [default:<br/>
+    //Statements executed when none of
+    //the values match the value of the expression<br/>
+    [break;]]<br/>
+}
+</p>
+		<p>The switch expression is evaluated just once. The expression’s value is compared with the values of each case. When a match occurs, the code that follows executes. Then the break keyword is met, JavaScript leaves the switch code block (so no unnecessary values are compared). Default is used to execute some code when none of the preceding cases were met.</p>
+		<a href="1.3_Conditiona_Statements_switch.html" target="new">Code - Switch</a>
+		
+<h3>1.4 Loops</h3>
+	  <p>Loops are useful because they can execute a block of code many times, over and over. There are a number of different loops in JavaScript. I will introduce two:  for and while loops.</p>
+	  <h5>For loops</h5>
+		<p>With for loops, you can control how many times a loop loops.</p>
+	  <h6>Syntax</h6>
+	  <p class="syntax">for (counter-variable; condition-statement; increment-section) {
+ code block to be executed
+}		</p>
+		<p>The counter variable is used in the for loops to count how many times the loop has looped. It has no use except for this. The conditional statement checks whether the loop should execute. The increment section tells the loop to increment the counter variable either up (++) or down, decrement (--). <br/> 
+
+(Nested for loops are also possible. This means a for loop is written inside another for loop: an outer loop and an inner loop). 
+
+		</p>
+		<p><a href="1.4 _For_loops.html" target="new">Code - For Loop</a></p>
+		<h5>While loop</h5>
+	  <p>While loop is very common, just like for loop.
+The while loop loops through a block of code as long as a specified condition is true, rather than us choosing how many times the loop loops like in a for loop.
+	  </p>
+		<h6>Syntax</h6>
+	  <p class="syntax">While (expression)<br/> statement</p>
+		<p>For example, this while loop prints the number from 0 to 15:</p>
+		<p class="code">var counter = 0; <br/>
+		while ( counter < 16) { <br/>
+			document.write(counter); <br/>
+			counter++ <br/> 
+						  }
+						  
+	  </p>
+	
+	<h3>1.5 Functions</h3>	
+	  <p>A function is a block of code that is defined just once, but can be executed many times.  Functions are objects, so they can be manipulated by programs because we can give them properties and methods. They are useful for repetitive tasks. Functions begin with the function keyword.  </p>
+		<h6>Syntax</h6>
+		<p class="syntax">function functionName (arg0, arg1, … argX) {<br/>
+code to be executed<br/>
+}
+		</p>
+		
+		<p>The section between the curly brackets is called the <em>body of the function</em>.<br/>
+A function can be executed by an <em>event</em> or a <em>call to the function</em>:  
+		</p>
+	  <h6>Syntax- call</h6>
+		<p class="code">functionName(argumentValues);</p>
+	  <h6>Syntax- event</h6>
+	  <p class="code">eventName=functionName(argumentValues)</p>
+		<p>For example, the event could be onclick:</p>
+		<p class="code">&lt;button onclick=“functionName(“pink”, “green”, “orange”)&quot;&gt;Click me&lt;/button&gt;</p>
+		<p class="code">
+		</p>
+	  <a href="1.5_Function-simple-one.html" target="new">Code - Functions</a>
+		
+<h3>1.6	Objects – General Overview</h3>	
+	  <p>JavaScript is an object-based programming language. Objects in JavaScript are a collection of<em> properties</em> and<em> methods</em> (like how objects in the real world are too) and of<em> constructors</em>, as well. As I explained in the variables section, there are two general object categories: built-in objects and custom objects. Built in objects have pre-defined methods and properties but those of custom objects must be defined by the developer. </p>
+		<p>W3School gives this information on objects:</p>
+		<div class="quote">
+		<p>"In JavaScript, almost "everything" is an object.</p>
+			<ul>
+				<li>Booleans can be objects (if defined with the new keyword)</li>
+				<li>Numbers can be objects (if defined with the new keyword)</li>
+				<li>Strings can be objects (if defined with the new keyword)</li>
+				<li>Dates are always objects</li>
+				<li>Maths are always objects</li>
+				<li>Regular expressions are always objects</li>
+				<li>Arrays are always objects</li>
+				<li>Functions are always objects</li>
+				<li>Objects are always objects</li>
+			</ul>
+			<p>All JavaScript values, except primitives, are objects."<br/> Reference: https://www.w3schools.com/js/js_object_definition.asp</p>
+		</div>
+	  <p>Properties contain the values for the object, and are name:value pairs. For example:</p>
+	  <p class="code">var coat = {type:"rain", fabric:"gortex", colour:”red”, size:"medium"};</p>
+	  <p>Methods are actions that can be performed on an object. They are stored in properties as function definitions. Constructors are used when creating an object. </p>
+		<p>You use a new operator to create many types of objects in JavaScript: </p>
+		<h6>Syntax</h6>
+	  <p class="syntax">var myVariable = new myObject();</p>
+		<p>For example:</p>
+		<p class="code">
+var book1 = new Book( );
+		</p>
+		<p>The new operator on the right side tells JavaScript that you want to make a new object. Then comes Book( ), a constructor of the Book object. </p>
+	  <h5>How to access the values held in an object’s properties:  </h5>
+	  <p>Write the variable name (that contains the object name), a dot, and then the object’s property name. </p>
+		<h6>Syntax</h6>
+		<p class="syntax">objectName.propertyName = value;</p>
+		<p>For example:</p>
+	  <p class="code">book1.title = "The Portrait of a Lady";</p>
+		<h5>How to call an object’s methods:  </h5>
+	  <p>How to call an object’s methods:  There are many, many different types of built in methods in JavaScript, for example, Date Object Methods. They share this syntax:</p>
+		<h6>Syntax</h6>
+	  <p class="code">objectName.methodName;</p>
+		<p>For example: </p>
+	  <p class="code">myDate.getDate();</p>
+		   <a href="1.6_Objects_constuctor_functions.html" target="new">Code - Objects (General)</a>
+		
+		<h3>1.7. JS Built-in Objects</h3>
+		<p>There is a vast number of built in objects in JavaScript. Here are just a few.</p>
+		<h4>The Date object</h4>
+		<p>The Date object is used to work with dates and times. Date objects are created like this:
+</p>
+		<p class="code">new Date()</p>
+		<p>The Date object can be used for a variety of different date or time information (for example, day of the week, time in minutes, year, and so on).  The Date object has two properties, constructor and prototype. The Date object has over forty built-in methods. Here are just a few:</p>
+		<p><strong>getDate()</strong><br/>
+		-returns the day of the month (in a number, from 1-31).<br/>
+		<strong>getFullYear()</strong><br/>
+		-returns the year in four digits <br/>
+			<strong>getTimezoneOffset()</strong><br/>
+		-returns the time difference between UTC time and local time (in minutes).
+		</p>
+		<a href="1.7_DateandMath.html" target="new">Code - Date object </a>
+		<h4>Math Object</h4>
+		<p>We use Math object to perform mathematical tasks. Properties and methods of Math don’t need to be created, but can be called using Math as an object.</p>
+		<h6>Syntax</h6>
+		<p class="code">var myVar = Math.PI;  (returns 3.14159 approx)<br/>
+		var myVar2 = Math.sqrt(20); (returns the square root of the number in brackets)
+		</p>
+		<p><em>Math.PI</em> is a property, while <em>Math.sqrt</em> is a method. There are many math methods, including:</p>
+		<p><strong>Max(x,y,z,… n)</strong><br/>
+		-returns the number with the highest value.<br/>
+		<strong>Random()</strong><br/>
+		-returns a random number between 0 and 1.<br/>
+		 </p>
+		
+		<h3>1.8. Array Object </h3>
+			<p>An array is a build-in JavaScript object defined as a collection of data values (elements) organized under a single name. Each element of the array is identified by an index. Indexes in arrays always begin at 0. The data type in the value can be any kind. In my example for pies that follows, string data type is used.</p>
+			<h6>Syntax</h6>
+			<p class="syntax">arrayName[indexNumber] = “value”</p>
+			<p>For Example:</p>
+			
+			<table width="200" border="1">
+  <tbody>
+    <tr>
+      <th scope="col">Element</th>
+      <th scope="col">[index]</th>
+      <th scope="col">Value</th>
+    </tr>
+    <tr>
+      <td>aPie</td>
+      <td>[0]</td>
+      <td>blueberry</td>
+    </tr>
+    <tr>
+      <td>aPie</td>
+      <td>[1]</td>
+      <td>lemon merengue</td>
+    </tr>
+    <tr>
+      <td>aPie</td>
+      <td>[2]</td>
+      <td>pecan</td>
+    </tr>
+    <tr>
+      <td>aPie</td>
+      <td>[3]</td>
+      <td>tourtiere</td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+			<p class="code">aPie[0] = “blueberry”</p>
+	<p>An easy way to create an arrays is using an array literal:</p>	
+			<h6>Syntax</h6>
+			<p class="syntax">var array_name = [item1, item2, ...];  <br/>    
+var Pies = ["Blueberry", "Lemon Meringue", "Pecan", “Tourtiere”];
+</p>
+			<p> Using the keyword new is also possible:</p>
+			<p class="code">var Pies = new Array("Blueberry", "Lemon Meringue", "Pecan " “Tourtiere”);</p>
+			<p>You can access the elements of an array by referring to the index number. For example, if I want to access “Pecan”:</p>
+			<p class="code">var name = Pies[2];</p>
+			<p>In JavaScript there are built-in array properties and methods. The following are a few.</p>
+
+<p>The Length Property returns  the number of array elements.:<span class="code">arrayName.length</span> <br/>
+For example: <span class="code">Pies.length;</span>
+
+which returns 4. </p>
+
+<p>The constructor property returns the constructor function for an object: <span class="code">Pies.constructor; </span>
+which returns <em>function Array() { [native code] }</em>
+
+</p>
+	<h4>Methods</h4>
+			<p><strong><em>Conversion Methods:</em></strong> conversion of an array object to a string.<br/><strong>toString()</strong><br/>Converts the content of array to a string with all the array values listed and separated by commas.  <strong>valueOf()</strong> can be used to do the same thing.</p>
+			<p><em><strong>Stack Methods</strong></em> allow an array to behave in a way so the most recent added element is the first one to be removed <br/>
+			<strong>push(values)</strong><br/>
+			Adds new items to the end of an array, and returns the new length.<br/>
+<strong>pop()</strong><br/>
+Returns the last element. <span class="code">Pies.pop()</span> will return the value “Tourtiere” in my pie array example.
+</p>
+		<p><em><strong>Queue Methods</strong></em> are used to add element to the end of the array and retrieve the first item.<br/>  
+<strong>shift()</strong><br/>
+Removes the first element in the array and returns the length of the array minus that element.<br/>
+<strong>unshift(values)</strong> <br/>
+Does the opposite of shift(), adding elements to the beginning and then returning the array’s new length.</p>
+			<p><em><strong>Reordering Methods</strong></em><br/>
+<strong>reverse()</strong><br/>
+Reverses the order of the array elements.<br/>
+<strong>sort()</strong>
+				Puts the elements in ascending order.</p>
+<p><em><strong>Manipulation Methods</strong></em><br/>
+<strong>concat(array1, array2 …)</strong><br/>
+Concatenates two or more arrays into one single array.<br/>
+<strong>slice(start, stop)</strong><br/>
+Extract the array items starting with start index up to the stop index. Then returns a new subarray 
+</p>
+	<p>Arrays can also be multidimensional. Multidimensional are arrays of arrays.
+The following code example is of a multidimensional array:
+</p>
+			<a href="1.8._Array_Object.html" target="new">Code - Arrays</a>
+<h3>1.9. String Object</h3>	
+		  <p>String Objects are created like this: <span class="code">var txt = new String(“string”);</span><br/>
+				or<br/><span class="code">var txt = “string”;</span>
+</p>
+		  <p>The String Object has a vast number of methods and properties. Here are just some:</p>
+		  <h5>Properties</h5>
+		  <p><em><strong>constructor</strong></em>   <span class="code">stringName.constructor</span><br/>
+returns the function that created the String objects prototype: 
+<em>function String() { [native code] }</em>
+</p>
+	<p><strong><em>length</em></strong>   <span class="code">stringName.length</span>
+returns the string’s length.
+</p>
+		  <p><em><strong>prototype</strong></em> <span class="code">stringName.prototype</span> is used to add properties and methods to an object.
+</p>
+			
+			<h5>Methods</h5>
+			<p><strong>charAt()</strong>returns the character at the index specified. <br/>
+				<strong>charCodeAt()</strong>
+returns the Unicode (uppercase, lowercase, number, or not a character or a number) at specified indexes.<br/>
+		  </p>
+			<a href="1.9_String_Object.html" target="new">Code -charCodeAt</a>
+			
+			<p><strong>concat() </strong>
+joins together strings and returns them as one joined string.
+</p>
+			<a href="1.9_String_Objects_concat.html" target="new">Code - concat()</a>
+			<p><strong>slice()</strong>
+extracts a part of a string and returns the extracted part in a new string:
+<br/>
+				<span class="code">var desert = "Pie, Cake, Pastry";<br/>
+					var res = desert.slice(5, 9);</span><br/>
+-returns <em>Cake</em>.<br/>
+				<strong>replace()</strong>
+replaces a specified value with another value in a string:<br/><span class="code">desert.replace("Cake","Fruit");</span><br/>
+
+Cake is replaced with Fruit.<br/>
+
+<strong>toUpperCase()</strong>
+converts a string to uppercase letters. <br/>
+<strong>toLowerCase()</strong>
+converts a string to lowercase letters.<br/>
+
+<strong>search()</strong>
+searches a string for a specified value and returns the position of the match: <br/>
+<span class="code">var weather = "The weather is so foggy today I can’t see the mountain.";<br/>
+weather.search("foggy");</span><br/>
+-returns <em>18</em>.
+		  </p>
+			<h3>2.1. Browser Objects</h3>
+			<p>Numerous objects are made available by the browser in JavaScript. This collection of objects is called the Browser Object Model or BOM. The BOM is a hierarchy:</p>
+	  <img src="BOM.png" alt="a diagram of the BOM" width="571" height="258" title="BOM"/> 
+		<h5>Window Object</h5>
+			<h4>Methods</h4>
+			<p><strong>alert()</strong><br/>
+<strong>prompt()</strong><br/>
+<strong>focus()</strong><br/>
+Sets focus to the current window<br/>
+<strong>setTimeout()</strong><br/>
+Calls a function or evaluates an expression after a specified number of milliseconds<br/>
+<strong>confirm()</strong><br/>
+Displays a dialog box with a message and an OK and a Cancel button
+</p>
+			<h4>Properties</h4>
+			<p>There are many properties. Here are four common ones:</p>
+<p><strong>status</strong><br/>
+Sets or returns the text in the status bar of a window<br/>
+<strong>innerHeight</strong><br/>
+Returns the inner height of a window's content area<br/>
+<strong>parent</strong><br/>
+Returns the parent window of the current window<br/>
+<strong>closed</strong><br/>
+Returns a Boolean value indicating whether a window has been closed or not<br/>
+</p>
+	<h5>Navigator Object</h5>	
+			<p>
+			The navigator object contains information about the browser.
+			</p>
+			<h4>Methods</h4>
+			<p>
+			<strong>javaEnabled()</strong><br/>
+Specifies whether or not the browser has Java enabled<br/>
+<strong>taintEnabled()</strong><br/>
+Removed in JavaScript version 1.2. Specifies whether the browser has data tainting enabled
+			</p>
+			<h4>PROPERTIES</h4>
+			<p>
+				Properties include:</p>
+<p><strong>language</strong><br/>
+Returns the language of the browser<br/>
+<strong>geolocation</strong><br/>
+Returns a Geolocation object that can be used to locate the user's position<br/>
+<strong>appCodeName</strong><br/>
+Returns the code name of the browser<br/>
+<strong>userAgent</strong><br/>
+Returns the user-agent header sent by the browser to the server
+
+			</p>
+			
+			<h5>Screen Object</h5>
+			<p>The screen object contains information about the visitor's screen. This is useful for making dynamic web pages, among other uses.</p>
+			<h4>Properties</h4>
+			<p>
+			<strong>availHeight</strong><br/>
+Returns the height of the screen (excluding the Windows Taskbar)<br/>
+<strong>availWidth</strong><br/>
+Returns the width of the screen (excluding the Windows Taskbar)<br/>
+<strong>colorDepth</strong><br/>
+Returns the bit depth of the color palette for displaying images<br/>
+<strong>height</strong><br/>
+Returns the total height of the screen<br/>
+<strong>pixelDepth</strong><br/>
+Returns the color resolution (in bits per pixel) of the screen<br/>
+<strong>width</strong><br/>
+Returns the total width of the screen
+			</p>
+			<h5>Location Object</h5>
+			<p>You can create a location object by assigning a URL to the location property of an object.  For example:  window.location = “C:\Users\janet\Documents\ch16_example1.html”</p>
+
+			<h4>Methods</h4>
+			<p>
+			<strong>met assign(</strong>)<br/>
+Loads a new document<br/>
+<strong>reload()</strong><br/>
+Reloads the current document<br/>
+<strong>replace()</strong><br/>
+Replaces the current document with a new one
+			</p>
+			<h4>Properties</h4>
+			<p>Properties include:</p>
+			<p>
+<strong>search</strong><br/>
+Sets or returns the querystring part of a URL<br/>
+<strong>pathname</strong><br/>
+Sets or returns the path name of a URL<br/>
+<strong>host</strong><br/>
+Sets or returns the hostname and port number of a URL<br/>
+			</p>
+			<a href="2.1_Location-Object.html" target="new">Code - Location Object</a>
+			
+			<h5>History Object</h5>
+			<p>The history object contains the URLs the user has visited.
+The history object is accessed through the window.history property 
+</p>
+			<h4>Methods</h4>
+		<p>
+			back()<br/>
+Loads the previous URL in the history list<br/>
+forward()<br/>
+Loads the next URL in the history list<br/>
+go()<br/>
+Loads a specific URL from the history list
+			</p>
+			<h4>Properties</h4>
+			<p>
+			<strong>length</strong><br/>
+Returns the number of URLs in the history list
+
+			</p>
+			
+			<h3>2.2. HTML Objects</h3>
+			<h4>Document Object Model (DOM): HTML objects</h4>
+			<p>When we open a web, the browser creates a Document Object Model of the page (DOM). It is a tree of objects:</p>
+			<img src="DOM.png" width="650" height="364" alt=""/>
+			
+			<p>
+			HTML DOM properties are values of HTML Elements. You can set or change them. You can use methods to perform actions on the HTML Elements.
+			
+			</p>
+			<p>A common method is <em>getElementById</em>. It is used to access an HTML element using its id.<span class="code">document.getElementById(id)</span>
+			</p>
+			<p>HTML elements can be changed, including these ways:</p>
+			<p><span class="code">element.style.property = new style</span><br/>
+-changes the style of an HTML element<br/>
+				<span class="code">element.attribute = new value</span><br/>
+				-changes the attribute value of an HTML element<br/>
+				
+</p>
+			<p>Adding or Deleting elements is possible, including these ways:</p>
+			<p><span class="code">document.write()</span><br/>
+				-writes text into the HTML output stream<br/>
+				<span class="code">document.removeChild(element)</span><br/>
+				-removes an HTML element	
+			</p>
+			<p>Finding HTML Objects is also possible.</p>
+			<h4>Properties used with forms include:</h4>
+			<p><span class="code">formObject.autocomplete = on| off
+formObject.method = get|post
+formObject.noValidate = true|false 
+</span></p>
+			<h4>Methods used with forms are:</h4>
+			
+			<p><strong>reset()</strong><br/>
+Resets a form<br/>
+<strong>submit()</strong><br/>
+Submits a form
+</p>
+	<a href="2.2_dom-getbyid.html" target="new">Code - DOM</a>		
+			
+<h3>2.3. Events </h3>
+			<p>An event is an action performed on a Web Page. For example by clicking a button, moving a mouse pointed over an element, and so on.  They are used to make web pages dynamic and increase user interaction with the page.</p>
+			<p>Events can be generated by the user (onclick, etc) or automatically (onload, etc).</p>
+			<p>Event handlers are functions that are called in response to an event.
+There are different ways to register event handlers to an HTML element. Ones that are most useful to know are traditional and W3C model.
+</p>
+			<h6>Traditional syntax:</h6>
+			<p>Add event listener:   <span class="syntax">element.event = myFunction;</span><br/>
+			remove event listener:   <span class="syntax">element.event = null;</span>
+			</p>
+			<h6>W3C model Syntax:</h6>
+			<p>Add event listener:   <span class="syntax">element.addEventListener(‘click’, myFunction, false)</span><br/>
+			Remove event listener:   <span class="syntax">element.removeEventListener(‘click’, myFunction, false)</span><br/>
+			</p>
+			<h5>Event handlers</h5>
+			<p>There are many event handlers. This is just a partial list.</p>
+			<h4>Window and document event handlers</h4>
+			<p><strong>onload</strong>  - the browser has completed loading the document<br/>
+<strong>onscroll</strong> – the user has moved the scrollbar <br/>
+<strong>onerror</strong> – an erros has occurred in the JavaScript program<br/>
+</p>
+			<p><strong>Syntax:</strong> <span class="code">&lt;element onload=&quot;script&quot;&gt;</span></p>
+	<h4>Form event handlers</h4>
+			<p><strong>onfocus</strong> – The user has entered an input field<br/>
+<strong>onblur</strong> – The user has exited an input field<br/>
+<strong>onselect</strong> – The user has selected text within an input or textarea field<br/>
+</p>
+			<p><strong>Syntax</strong><br/>
+			in html: <span class="code">&lt;element onblur=&quot;myScript&quot;&gt;</span><br/>
+ in JavaScript:<span class="code">object.onblur = function(){myScript};</span> <br/>
+In JavaScript, using the addEventListener() method:<span class="code">object.addEventListener("blur", myScript);
+				</span></p>
+<h4>Mouse and Keyboard event handlers</h4>
+			<p>
+			<strong>onclick</strong> – The user clicks the mouse button<br/>
+<strong>onkeydown</strong>  - The user has pressed a key<br/>
+<strong>onmouseout</strong> – The user has moved the mouse pointed off of an element
+			</p>
+			<p><strong>Syntax</strong><br/>
+				in html: <span class="code">&lt;element onmouseout=&quot;myScript&quot;&gt; </span><br/>
+in JavaScript: <span class="code">object.onmouseout = function(){myScript};</span><br/>
+In JavaScript, using the addEventListener() method:<span class="code">object.addEventListener("mouseout", myScript);
+</span>
+			</p>
+	<a href="2.3_events.html" target="new">Code -Events</a>
+		</article>
+    </section>
+    <section id="sidebar"> 
+      <!--************************************************************************
+    Sidebar starts here. 
+    ****************************************************************************-->
+      <div></div>
+     
+    </section>
+    
+</body>
+</html>

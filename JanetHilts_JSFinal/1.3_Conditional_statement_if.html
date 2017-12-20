@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>1.3 Conditional Statements - if </title>
+</head>
+<body>
+    <script>
+        var degFahren = parseInt(prompt("Enter the degrees Fahrenheit", 32), 10); 
+        var degCent = 5/9 * (degFahren - 32);
+
+        document.write(degFahren + "\xB0 Fahrenheit is " + degCent +
+           "\xB0 centigrade<br />");
+ /** If the value of degCent is less than zero, this document.write line will be executed. **/
+        if (degCent < 0) {
+            document.write("That's below the freezing point of water");
+        }
+		/** If the value of degCent is equal to 100, this document.write line will be executed. **/
+
+        if (degCent == 100)
+            document.write("That's the boiling point of water");
+    </script>
+</body>
+</html>

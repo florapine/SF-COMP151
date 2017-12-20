@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>1.9. String Object</title>
+</head>
+<body>
+    <script>
+	/** This code uses the string object method charCodeAt() to return 
+	the Unicode (uppercase, lowercase, number, or not a character or a number) at specified indexes. **/
+        function checkCharType(charToCheck) {
+            var returnValue = "O";
+            var charCode = charToCheck.charCodeAt(0);
+
+            if (charCode >= "A".charCodeAt(0) && charCode <= "Z".charCodeAt(0)) {
+                returnValue = "U";
+            } else if (charCode >= "a".charCodeAt(0) &&
+                       charCode <= "z".charCodeAt(0)) {
+                returnValue = "L";
+            } else if (charCode >= "0".charCodeAt(0) &&
+                       charCode <= "9".charCodeAt(0)) {
+                returnValue = "N";
+            }
+        
+            return returnValue;
+        }
+
+        var myString = prompt("Enter some text", "Hello World! How is it going?");
+
+        switch (checkCharType(myString)) {
+            case "U":
+                document.write("The first character was upper case");
+                break;
+            case "L":
+                document.write("The first character was lower case");
+                break;
+            case "N":
+                document.write("The first character was a number");
+                break;
+            default:
+                document.write("The first character was not a character or a number");
+        }
+    </script>
+</body>
+</html>

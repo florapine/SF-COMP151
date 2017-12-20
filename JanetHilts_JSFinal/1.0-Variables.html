@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Hilts Final Assignment part 1.0 Variables</title>
+</head>
+<body>
+    <script>
+		var MyVariable0; /** This variable is undefined (it has no value assigned to it). **/
+        var MyVariable1 = 4; /** This variable is a number. **/
+		var MyVariable2 = "4"; /** This variable is different from MyVariable1 because it is in quotes (making it a string). **/
+		var MyVariable2b = "I'm a string"; /** Another string. **/
+		var MyVariable3 = true; /** A boolean (true or false). **/
+		var MyVariable4 = null; /** This variable, initialized to the value null, is called an empty object pointer. It can be used when an object will be uesd later, but is not yet availible in the code. **/
+		
+		document.write ( "Here you can see the value for four Simple data types:<br/>" + "Number: " + MyVariable1 + "<br/>"  + "String: " + MyVariable2b + "<br/>"  + " and so am I: " + MyVariable2 + "<br/>" + "Boolean: " + MyVariable3 + "<br/>" + "Null: " + MyVariable4 + "<br/>" );
+		
+		var MyVariable5 = (parseInt(MyVariable2))+ MyVariable1;
+		
+		document.write ("In this example, ParseInt() is used to convert a string to a number and then add that number to a variable that's a number already: " + MyVariable5 +"<br/>");
+   
+		var MyVariable6 = (Number(MyVariable3))+ MyVariable1;
+		
+		document.write ("This example is similar but here Number() is used to convert a boolean to a number and then the additon occurs: " + MyVariable6 +"<br/><br/><br/>");
+        /** This is an example of a Complex Data Type: the Object data type. Specifically a Custom Object**/
+		var skirt = {style:"pencil", size:"medium", color:"tan"};
+		
+		document.write ("This sentence includes the Object data type, where the variable is skirt, and properties are style, size, and colour:<br/>" +"The skirt you have chosen is a " + skirt.color + ", " + skirt.size + " size, " + skirt.style + " skirt.<br/>"  );
+		
+   </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>For Loop</title>
+</head>
+<body>
+    <script>
+        function convertToCentigrade(degFahren) {
+            var degCent = 5 / 9 * (degFahren - 32);
+            return degCent;
+        }
+
+
+        var degFahren = [212, 32, -459.15]; /** some temperatures are stored in an array **/
+        var degCent = []; /** the temperatures in Celcius are unknown, so it is an empty array **/
+        var loopCounter; 
+/** Here is the first for loop.
+First the loopCounter variable is initialized to 0. Then it is checked against the condition >= 2. If this is true,
+the loop is executed for the first time. This repeats until the condition is not met, and is false. Then
+the next first statement after the last curley bracket is is read and executed. (There are only three values
+ in this array, 0, 1, 2, so the loopCounter condition is set to less than or equal to 2). **/
+        for (loopCounter = 0; loopCounter <= 2; loopCounter++) {
+            degCent[loopCounter] = convertToCentigrade(degFahren[loopCounter]);
+        }
+/** Here is a second for loop.
+This time the loopCounter starts at 2, and decrements down to 0, using --. 
+ **/
+        for (loopCounter = 2; loopCounter >= 0; loopCounter--) {
+            document.write("Value " + loopCounter +
+                           " was " + degFahren[loopCounter] +
+                           " degrees Fahrenheit");
+
+            document.write(" which is " + degCent[loopCounter] + 
+                           " degrees centigrade<br />");
+        }
+    </script>
+</body>
+</html>

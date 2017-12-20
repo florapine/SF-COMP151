@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Objects - construction functions - practise from video</title>
+ <script>
+       function Book( )  {
+	   this.title = "Default title";
+	   this.price = 0.0;
+	   }
+
+    </script>
+  
+</head>
+<body>
+
+<h2>Books</h2>
+
+
+<script>
+
+	var b1 = new Book( ); /**  Create a new object  **/
+	
+	b1.title = "The Diviners"; /** set a new property **/
+	b1.price = 12;  /** set another property **/
+	
+	document.write( b1.title + "<br/>" + b1.price + "$<br/>"); /** Print the object's property values **/
+
+	
+	var b2 = new Book( );
+	
+	b2.title = "The Portrait of a Lady";
+	b2.price = 15;
+	
+	document.write( b2.title + "<br/>");
+	document.write( b2.price + "$<br/>");
+	
+	
+   </script>
+</body>
+</html>

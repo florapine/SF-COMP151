@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Operators - Arithmetic</title>
+</head>
+<body>
+    <script>
+        var $miles2convert = prompt("Enter the distance in miles:", "");
+		var disKilometers;
+		var result;
+		
+		
+		
+		disKilometers =  parseInt($miles2convert)*1.609;  /** parseInt converts the string that the user inputs in the prompt to a number so it can by multiplied by 1.609**/
+		result = disKilometers.toFixed(3);
+		document.write ( " " + $miles2convert + " miles is " + result + " km. ");
+		
+    </script>
+</body>
+</html>

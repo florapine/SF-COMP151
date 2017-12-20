@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Conditional Statements - switch</title>
+</head>
+<body>
+    <script>
+	
+	 var myAge = parseInt( prompt("Enter your age", 30), 10 );
+	 
+	 switch (true) {
+		case (myAge >= 0 && myAge <= 10) && (myAge >= 80 || myAge <= 10 ) : /** If this case is true for the myAge value the user entered, the alert message will execute. If false, JavaScript will contiue to the next case.**/
+			alert("myAge is between 0 and 10.  myAge is 80 or above OR 10 or below. ");
+			break;
+		case !(myAge >= 0 && myAge <= 10) && ( myAge >= 80 || myAge <= 10 ) && (myAge >= 30 && myAge <= 39) || (myAge >= 80 && myAge <= 89):
+			alert("myAge is NOT between 0 and 10.  myAge is 80 or above OR 10 or below.  myAge is between 30 and 39 or myAge is between 80 and 89" );
+			break;
+		
+		case (myAge >= 30 && myAge <= 39) || (myAge >= 80 && myAge <= 89) :
+			alert("myAge is between 30 and 39 or myAge is between 80 and 89.  ");
+			break;
+		case !(myAge >= 0 && myAge <= 10):
+			alert("myAge is NOT between 0 and 10.");
+			break; 
+	 }
+	
+    </script>
+</body>
+</html>

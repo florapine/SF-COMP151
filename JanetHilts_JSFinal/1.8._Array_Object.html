@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<body>
+
+<script type="text/javascript">
+
+//create new variable and arrays and assign values
+var myCars = new Array();
+
+myCars[0] = new Array();
+myCars[0][0] = "BMW";
+myCars[0][1] = 50.500;
+myCars[0][2] = "B-120";
+
+myCars[1] = new Array();
+myCars[1][0] = "Mercedes";
+myCars[1][1] = 58.800;
+myCars[1][2] = "Executive 490";
+
+myCars[2] = new Array();
+myCars[2][0] = "Ferrari";
+myCars[2][1] = 80.750;
+myCars[2][2] = "Golden Fire";
+
+// Final new array has 5 dimensions
+myCars[3] = new Array();
+myCars[3][0] = "MGC";
+myCars[3][1] = 39.500;
+myCars[3][2] = "C-22";
+myCars[3][3] = "Cream";
+myCars[3][4] = "Convertable";
+myCars[3][5] = "Year: 1963";
+
+/*  */
+
+//alert number of cars and all the information about each car
+alert("My car list has " + myCars.length + " cars:" + "\n" + myCars[0][0] + " in the " + myCars[0][2] + " model, priced at: $" + myCars[0][1] + "\n" + myCars[1][0] + " in the " + myCars[1][2] + " model, priced at: $" + myCars[1][1] + "\n" + myCars[2][0] + " in the " + myCars[2][2] + " model, priced at: $" + myCars[2][1] + "\n" + myCars[3][0] + " with characteristic 1: " + myCars[3][2] + ", characteristic 2: $"  + myCars[3][1] + ", characteristic 3: " + myCars[3][3] + ", characteristic 4: " + myCars[3][4] + ", characteristic 5: " + myCars[3][5] + "\n"
+	);
+
+
+</script>
+
+</body>
+</html>

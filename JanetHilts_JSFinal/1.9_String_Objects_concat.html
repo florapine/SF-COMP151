@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>1.9_String_Objects_concat</title>
+</head>
+<body>
+    <script>
+	/** This is some simple code that uses the string object method concat() to join 
+	strings togther and print them out as one string**/
+        var greetingString = "Hello ";
+        var myName = prompt("Please enter your name ", "");
+		//var concatString; // 
+		
+		var ageString = ". You are ";
+		var myAge = prompt("Please enter your age ", "");
+		//var concatString;
+		
+		var phoneString = ". I will contact you by phone at: ";
+		var myPhone = prompt(" Please enter your phone number ", "");
+		//var concatString;
+		
+		var emailString = " or by email at: ";
+		var myEmail = prompt("Please enter you email address ", "");
+		//var concatString;
+		
+		var joined = greetingString.concat(myName, ageString, myAge, phoneString, myPhone, emailString, myEmail);
+	// alert (greetingString + " " + myName + ". " + ageString + " " + myAge + ". " + phoneString + " " + myPhone + " " + emailString + " " + myEmail + ". " + " Have a nice day." );
+
+   // concatString = greetingString + " " + myName + ". " + ageString + " " + myAge + ". " + phoneString + " " + myPhone + " " + emailString + " " + myEmail + ". " + " Have a nice day." ;
+
+    alert (joined);
+    </script>
+</body>
+</html>
